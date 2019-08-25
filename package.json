@@ -1,0 +1,56 @@
+{
+  "name": "webpack_template",
+  "version": "1.0.0",
+  "description": "webpack template project",
+  "main": "app.js",
+  "repository": "https://github.com/tetrohed/webpack_template",
+  "author": "tetrohed <armin65@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "./build_production.sh",
+    "start": "node build/server.js",
+    "dev": "nodemon --exec ./run_dev_server.sh"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/register": "^7.5.5",
+    "@testing-library/dom": "^6.1.0",
+    "@testing-library/jest-dom": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.2.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.1",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "index.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "build/*",
+      "dist/*"
+    ]
+  }
+}
