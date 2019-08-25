@@ -10,3 +10,5 @@ to build the image:
 to run the image:
 
 `docker run -p 3000:3000 -it webpack_template`
+
+[![Build Status](https://travis-ci.org/tetrohed/webpack_template.svg?branch=master)](https://travis-ci.org/tetrohed/webpack_tempate)

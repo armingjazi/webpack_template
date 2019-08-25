@@ -1,12 +1,10 @@
 import { component } from './example_component';
 
-const example_container = function () {
-  const data = [];
+export function container () {
   const handleClick = () => {
-    data.push({ text: 'Hey There! You Clicked on a button' });
-    setState(data)
+    setState({ text: 'Hey There! You Clicked on a button!' });
   };
   const { element, setState } = component(handleClick);
 
-  return element;
-};
+  return { element };
+}

@@ -1,4 +1,5 @@
 import css from './app.css';
+import { container } from './example_module/example_container';
 
 export function app () {
   const element = document.createElement('div');
@@ -11,6 +12,8 @@ export function app () {
   p.textContent = 'Webpack Template';
 
   element.appendChild(p);
+
+  element.appendChild(container().element);
 
   return { element };
 }
